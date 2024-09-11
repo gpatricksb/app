@@ -30,6 +30,10 @@ async function listarMetas(){
         return
     }
 
+    metas.forEach((m) => {
+        m.checked = false
+    })
+
     respostas.forEach((resposta) => {
         const meta = metas.find((m) => {
             return m.value == resposta
